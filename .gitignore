@@ -1,6 +1,9 @@
 # Compiled class file
 *.class
 
+# Lombok
+*.lock
+
 # Log file
 *.log
 
