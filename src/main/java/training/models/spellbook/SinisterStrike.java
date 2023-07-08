@@ -2,6 +2,6 @@ package training.models.spellbook;
 
 public class SinisterStrike extends Spell{
     public SinisterStrike() {
-        super(40, 6);
+        super(40, 8);
     }
 }
