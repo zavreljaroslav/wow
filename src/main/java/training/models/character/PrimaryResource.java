@@ -8,5 +8,6 @@ import training.utils.Utils;
 @Setter
 public class PrimaryResource {
     private int amount;
+    private int maxAmount = 100;
     private Utils.primaryResourceType primaryResourceType;
 }

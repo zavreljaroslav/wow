@@ -2,6 +2,9 @@ package training.models.character;
 
 import lombok.Getter;
 import lombok.Setter;
+import training.models.items.Item;
+
+import java.util.List;
 
 @Setter
 @Getter
@@ -9,6 +12,7 @@ public class Character {
     private String name;
     private Class aClass;
     private int level;
+    private List<Item> inventory;
 
     public Character(String name, Class aClass) {
         this.name = name;

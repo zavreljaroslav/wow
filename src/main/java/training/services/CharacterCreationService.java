@@ -1,14 +1,10 @@
 package training.services;
 
-import jdk.jshell.execution.Util;
-import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import training.models.character.Character;
-import training.models.character.Class;
 import training.models.character.Rogue;
 import training.utils.Utils;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -63,7 +59,9 @@ public class CharacterCreationService {
             case "ROGUE":
                 characters.add(new Character(this.chosenName, new Rogue()));
         }
-        System.out.println("You've just created your character: " + characters.get(characters.size() - 1).toString() + "!");
+        System.out.println("You've just created your character: " +
+                characters.get(characters.size() - 1).getName() + " the " +
+                characters.get(characters.size() - 1).getAClass().getClassName() + "!");
     }
 
     private void errorMessage() {

@@ -8,6 +8,7 @@ import lombok.Setter;
 public class Spell {
     protected int cost;
     protected int damage;
+    protected String name;
 
     public Spell(int cost, int damage) {
         this.cost = cost;
