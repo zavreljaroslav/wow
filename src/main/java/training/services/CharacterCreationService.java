@@ -8,6 +8,9 @@ import training.utils.Utils;
 import java.util.List;
 import java.util.Scanner;
 
+import static training.utils.Utils.errorMessage;
+import static training.utils.Utils.toInteger;
+
 @NoArgsConstructor
 public class CharacterCreationService {
     private final Scanner input = new Scanner(System.in);
@@ -29,16 +32,13 @@ public class CharacterCreationService {
 
             String chosenClass = input.nextLine();
 
-            try {
-                int classNumber = Integer.parseInt(chosenClass);
-                if (classNumber > numberOfClasses || classNumber < numberOfClasses) {
-                    errorMessage();
-                } else {
-                    this.chosenClass = Utils.classes.values()[classNumber - 1];
-                }
-            } catch (Exception e) {
+            int classNumber = toInteger(chosenClass);
+            if (classNumber > numberOfClasses || classNumber < numberOfClasses) {
                 errorMessage();
+            } else {
+                this.chosenClass = Utils.classes.values()[classNumber - 1];
             }
+
         } while (chosenClass == null);
         createCharacterInstance();
         return characters;
@@ -61,10 +61,8 @@ public class CharacterCreationService {
         }
         System.out.println("You've just created your character: " +
                 characters.get(characters.size() - 1).getName() + " the " +
-                characters.get(characters.size() - 1).getAClass().getClassName() + "!");
+                characters.get(characters.size() - 1).getAClass().getClassNameTag() + "!");
+
     }
 
-    private void errorMessage() {
-        System.out.println("Please enter a valid number corresponding to the displayed options.");
-    }
 }

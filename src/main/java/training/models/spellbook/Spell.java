@@ -14,4 +14,8 @@ public class Spell {
         this.cost = cost;
         this.damage = damage;
     }
+    @Override
+    public String toString(){
+        return "Name: " + this.name + "\n   Damage: " + this.damage + "\n   Cost: " + this.cost;
+    }
 }

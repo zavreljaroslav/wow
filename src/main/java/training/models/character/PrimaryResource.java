@@ -9,5 +9,6 @@ import training.utils.Utils;
 public class PrimaryResource {
     private int amount;
     private int maxAmount = 100;
+    private int regenPerRound;
     private Utils.primaryResourceType primaryResourceType;
 }

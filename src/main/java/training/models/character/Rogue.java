@@ -18,8 +18,9 @@ public class Rogue extends Class {
         this.primaryResource.setPrimaryResourceType(Utils.primaryResourceType.ENERGY);
         regeneratePrimaryResource();
         this.spellBook = new SpellBook(Utils.classes.ROGUE);
-        this.baseHp = this.baseHp * hpModifier;
+        this.currentHp = this.baseHp * hpModifier;
         this.baseDamage = this.baseDamage * damageModifier;
-        this.className = "Rogue";
+        this.primaryResource.setRegenPerRound(energyRegenPerRound);
+        this.classNameTag = "Rogue";
     }
 }
