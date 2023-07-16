@@ -13,8 +13,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 public class SpellBook {
-    private List<Spell> spellList = spellList = new ArrayList<>();
-    ;
+    private List<Spell> spellList = new ArrayList<>();
 
     public SpellBook(Utils.classes className) {
 

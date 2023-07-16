@@ -3,7 +3,6 @@ package training.services;
 import training.models.character.Character;
 import training.models.character.Class;
 
-import java.sql.SQLOutput;
 import java.util.Random;
 import java.util.Scanner;
 
