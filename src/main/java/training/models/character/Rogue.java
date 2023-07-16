@@ -20,6 +20,7 @@ public class Rogue extends Class {
         this.spellBook = new SpellBook(Utils.classes.ROGUE);
         this.baseHp = this.baseHp * hpModifier;
         this.baseDamage = this.baseDamage * damageModifier;
+        this.className = "Rogue";
     }
 
     @Override
@@ -29,5 +30,9 @@ public class Rogue extends Class {
         } else {
             this.primaryResource.setAmount(100);
         }
+    }
+    @Override
+    public String getClassName(){
+        return "ROGUE";
     }
 }

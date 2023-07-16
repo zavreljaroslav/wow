@@ -8,6 +8,7 @@ import training.utils.Utils;
 @Getter
 @Setter
 public class Class {
+    protected String className;
     protected double baseHp = 100;
     protected double baseDamage = 3;
     protected PrimaryResource primaryResource;
